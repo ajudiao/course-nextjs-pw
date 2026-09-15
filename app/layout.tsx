@@ -10,28 +10,28 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR">
-      <header className="bg-amber-300">
-        <div className="max-w-300 mx-auto flex justify-between p-8 items-center">
-          <Link href="/">Logo</Link>
-          <nav>
-            <ul className="flex gap-4">
-              <li>
-                <Link href="/" className="text-zinc-800">Home</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/products">Products</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
       <body>
-        <main className="max-w-300 mx-auto p-8">
-          {children}
-        </main>
+        <header className="bg-amber-300">
+          <div className="max-w-300 mx-auto flex justify-between p-8 items-center">
+            <Link href="/">Logo</Link>
+            <nav>
+              <ul className="flex gap-4">
+                <li>
+                  <Link href="/" className="text-zinc-800">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about">About</Link>
+                </li>
+                <li>
+                  <Link href="/products">Products</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <main className="max-w-300 mx-auto p-8">{children}</main>
       </body>
     </html>
   );
